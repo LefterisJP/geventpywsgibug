@@ -1,5 +1,14 @@
 ## Potential bug in gevent pywsgi
 
+### Reproduction
+
+```
+$ pip install -r requirements.txt
+$ python -m example
+```
+
+### Result
+
 This minimal example in the repo crashes with a core dump whenever there is any kind of exception thrown in the WSGIServer logic.
 
 The stack overflow looks like this:
